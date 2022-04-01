@@ -1,0 +1,38 @@
+:root{
+  // 水平边距
+  --px: 16px;
+  // 水平边距 - 中
+  --px-md: 24px;
+  // 水平边距 - 大
+  --px-lg: 32px;
+  // 水平边距 - 小
+  --px-sm: 8px;
+  // 水平边距 - 最小
+  --px-xs: 4px;
+  // 垂直边距
+  --py: 16px;
+  // 垂直边距 - 中
+  --py-md: 24px;
+  // 垂直边距 - 大
+  --py-lg: 32px;
+  // 垂直边距 - 小
+  --py-sm: 8px;
+  // 垂直边距 - 最小
+  --py-xs: 4px;
+  // 默认文字大小
+  --size: 14px;
+  --size-xl: 20px;
+  --size-lg: 18px;
+  --size-md: 16px;
+  --size-sm: 12px;
+  // 页面标题文字大小
+  --size-page-title: 18px;
+  // 默认动画事件
+  --transition-time: .33s;
+  // 默认圆角
+  --border-radius: 4px;
+  // 大圆角，用于面板、抽屉等
+  --border-radius-lg: 6px;
+  // 小圆角，用于标签、徽章
+  --border-radius-sm: 3px;
+}

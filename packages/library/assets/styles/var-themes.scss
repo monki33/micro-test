@@ -1,0 +1,200 @@
+:root {
+  --color-brand-50: #EFF6FF;
+  --color-brand-100: #DBEAFE;
+  --color-brand-200: #BFDBFE;
+  --color-brand-300: #93C5FD;
+  --color-brand-400: #60A5FA;
+  --color-brand-500: #3B82F6;
+  --color-brand-600: #2563EB;
+  --color-brand-700: #1D4ED8;
+  --color-brand-800: #1E40AF;
+  --color-brand-900: #1E3A8A;
+
+  --color-grey-50: #F8FAFC;
+  --color-grey-100: #F1F5F9;
+  --color-grey-200: #E2E8F0;
+  --color-grey-300: #CBD5E1;
+  --color-grey-400: #94A3B8;
+  --color-grey-500: #64748B;
+  --color-grey-600: #475569;
+  --color-grey-700: #334155;
+  --color-grey-800: #1E293B;
+  --color-grey-900: #0F172A;
+  // 主色使用brand-600
+  --color-primary: var(--color-brand-500);
+  // 主色浅色
+  --color-primary-lighten: var(--color-brand-50);
+  // 主色悬浮色
+  --color-primary-hover: var(--color-brand-400);
+  // 主色选中色
+  --color-primary-active: var(--color-brand-600);
+  // 默认文字颜色
+  --color-text: var(--color-grey-600);
+  // 主要文字颜色
+  --color-text-primary: var(--color-grey-800);
+  // 次要文字颜色
+  --color-text-secondary: var(--color-grey-400);
+  // 反色文字颜色
+  --color-text-inverse: var(--color-grey-200);
+  // 反色主要文字颜色
+  --color-text-inverse-primary: var(--color-grey-50);
+  // 反色次要文字颜色
+  --color-text-inverse-secondary: var(--color-grey-300);
+  // 默认边框颜色
+  --color-border: var(--color-grey-200);
+  // 主要边框颜色
+  --color-border-primary: var(--color-grey-300);
+  // 次要边框颜色
+  --color-border-secondary: var(--color-grey-100);
+  // 再次要边框颜色
+  --color-border-thirdary: var(--color-grey-50);
+  // 阴影
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  // 阴影 - 小
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  // 阴影 - 中
+  --shadow-md: 0 0 20px 0 rgba(76, 87, 125, .02);
+  // 阴影 - 大
+  --shadow-lg: 0 0 50px 0 rgba(82, 63, 105, .15);
+  // 阴影 - 内部
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  // 整体背景色
+  --color-bg-html: #F1F5F9;
+  // 侧边栏背景色
+  --color-bg-sidebar: #fff;
+  // 侧边栏系统名称文字颜色
+  --color-text-sidebar-title: var(--color-text-primary);
+  // 侧边栏菜单文字颜色
+  --color-text-sidebar-nav: var(--color-text);
+  // 侧边栏菜单文字颜色 - active
+  --color-text-sidebar-nav-active: var(--color-primary);
+  // 侧边栏菜单背景色 - active - start
+  --color-bg-sidebar-nav-active-start: var(--color-brand-100);
+  // 侧边栏菜单背景色 - active - end
+  --color-bg-sidebar-nav-active-end: var(--color-brand-50);
+  // 面板颜色
+  --color-bg-panel: #fff;
+}
+
+[data-color-scheme="dark"]{
+  --color-grey-900: #F8FAFC;
+  --color-grey-800: #F1F5F9;
+  --color-grey-700: #E2E8F0;
+  --color-grey-600: #CBD5E1;
+  --color-grey-500: #94A3B8;
+  --color-grey-400: #64748B;
+  --color-grey-300: #475569;
+  --color-grey-200: #334155;
+  --color-grey-100: #1E293B;
+  --color-grey-50: #0F172A;
+  // 默认文字颜色
+  --color-text: var(--color-grey-700);
+  // 主要文字颜色
+  --color-text-primary: var(--color-grey-900);
+  // 次要文字颜色
+  --color-text-secondary: var(--color-grey-500);
+  // 反色文字颜色
+  --color-text-inverse: var(--color-grey-700);
+  // 反色主要文字颜色
+  --color-text-inverse-primary: var(--color-grey-90);
+  // 反色次要文字颜色
+  --color-text-inverse-secondary: var(--color-grey-600);
+  // 阴影
+  --shadow: 0 1px 3px 0 rgba(255, 255,  255, 0.1), 0 1px 2px 0 rgba(255, 255,  255, 0.06);
+  // 阴影 - 小
+  --shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+  // 阴影 - 中
+  --shadow-md: 0 0 20px 0 rgba(76, 87, 125, .02);
+  // 阴影 - 大
+  --shadow-lg: 0 0 50px 0 rgba(171, 156, 190, 0.15);
+  // 阴影 - 内部
+  --shadow-inner: inset 0 2px 4px 0 rgba(255, 255,  255, 0.06);
+  // 整体背景色
+  --color-bg-html: #161820;
+  // 侧边栏背景色
+  --color-bg-sidebar: #292a33;
+  // 侧边栏系统名称文字颜色
+  --color-text-sidebar-title: var(--color-text-inverse-primary);
+  // 侧边栏菜单文字颜色
+  --color-text-sidebar-nav: var(--color-text-inverse);
+  // 侧边栏菜单文字颜色 - active
+  --color-text-sidebar-nav-active: var(--color-text-inverse-primary);
+  // 侧边栏菜单背景色 - active - start
+  --color-bg-sidebar-nav-active-start: var(--color-brand-800);
+  // 侧边栏菜单背景色 - active - end
+  --color-bg-sidebar-nav-active-end: var(--color-brand-500);
+  // 面板颜色
+  --color-bg-panel: #292a33;
+}
+[data-brand-color="yellow"]{
+  --color-brand-50: #FEFCE8;
+  --color-brand-100: #FEF9C3;
+  --color-brand-200: #FEF08A;
+  --color-brand-300: #FDE047;
+  --color-brand-400: #FACC15;
+  --color-brand-500: #EAB308;
+  --color-brand-600: #CA8A04;
+  --color-brand-700: #A16207;
+  --color-brand-800: #854D0E;
+  --color-brand-900: #713F12;
+}
+[data-brand-color="red"]{
+  --color-brand-50: #FFF1F2;
+  --color-brand-100: #FFE4E6;
+  --color-brand-200: #FECDD3;
+  --color-brand-300: #FDA4AF;
+  --color-brand-400: #FB7185;
+  --color-brand-500: #F43F5E;
+  --color-brand-600: #E11D48;
+  --color-brand-700: #BE123C;
+  --color-brand-800: #9F1239;
+  --color-brand-900: #881337;
+}
+[data-brand-color="purple"]{
+  --color-brand-50: #FAF5FF;
+  --color-brand-100: #F3E8FF;
+  --color-brand-200: #E9D5FF;
+  --color-brand-300: #D8B4FE;
+  --color-brand-400: #C084FC;
+  --color-brand-500: #A855F7;
+  --color-brand-600: #9333EA;
+  --color-brand-700: #7E22CE;
+  --color-brand-800: #6B21A8;
+  --color-brand-900: #581C87;
+}
+[data-brand-color="orange"]{
+  --color-brand-50: #FFF7ED;
+  --color-brand-100: #FFEDD5;
+  --color-brand-200: #FED7AA;
+  --color-brand-300: #FDBA74;
+  --color-brand-400: #FB923C;
+  --color-brand-500: #F97316;
+  --color-brand-600: #EA580C;
+  --color-brand-700: #C2410C;
+  --color-brand-800: #9A3412;
+  --color-brand-900: #7C2D12;
+}
+[data-brand-color="green"]{
+  --color-brand-50: #ECFDF5;
+  --color-brand-100: #D1FAE5;
+  --color-brand-200: #A7F3D0;
+  --color-brand-300: #6EE7B7;
+  --color-brand-400: #34D399;
+  --color-brand-500: #10B981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065F46;
+  --color-brand-900: #064E3B;
+}
+[data-brand-color="cyan"]{
+  --color-brand-50: #ECFEFF;
+  --color-brand-100: #CFFAFE;
+  --color-brand-200: #A5F3FC;
+  --color-brand-300: #67E8F9;
+  --color-brand-400: #22D3EE;
+  --color-brand-500: #06B6D4;
+  --color-brand-600: #0891B2;
+  --color-brand-700: #0E7490;
+  --color-brand-800: #155E75;
+  --color-brand-900: #164E63;
+}

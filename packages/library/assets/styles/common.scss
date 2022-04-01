@@ -1,0 +1,266 @@
+@import "var-sizes";
+@import "var-themes";
+@import "var-element-plus";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  &:before,
+  &:after,
+  &::before,
+  &::after{
+    box-sizing: inherit;
+  }
+}
+html,
+body,
+.app{
+  height: 100%;
+}
+html{
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-size: var(--size);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  background-color: var(--color-bg-html);
+  transition: color, background-color var(--transition-time) ease-in;
+  &[data-color-scheme="dark"]{
+    transition-timing-function: ease-out;
+  }
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+//-------------------------------------- 应用布局
+.layout-default {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  .dda-header,
+  .dda-footer{
+    flex: none;
+  }
+  main{
+    width: calc(100% - 70px);
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    margin-left: 70px;
+  }
+}
+// 子应用的结构布局
+.subapp-wrapper {
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  .subapp-menus {
+    width: 230px;
+    height: 100%;
+    padding: 15px 19px 0 19px;
+    .subject p {
+      font-size: 18px;
+      color: #333;
+    }
+    .short-btn {
+      width: 40px;
+    }
+  }
+  .subapp-main {
+    flex: 1;
+    background-color: #fff;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}
+.vue-auth-box_{
+
+  padding: var(--py) var(--px)!important;
+  background: var(--color-bg-panel) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+  @media only screen and (min-width:1200px){
+    // .hidden-xs-only{display:none!important}
+    top:30%!important;
+    left: calc(50% + 400px)!important;
+  }
+  .auth-control_{
+    .range-box{
+      margin-top: var(--py) !important;
+      background-color: var(--color-grey-100) !important;
+      border-radius: var(--border-radius) !important;
+      box-shadow: var(--shadow-inner) !important;
+    }
+    .range-text{
+      color: var(--color-text-secondary) !important;
+    }
+    .range-slider{
+      background-color: var(--color-primary) !important;
+      border-radius: var(--border-radius) !important;
+      .range-btn{
+        background-color: var(--color-bg-panel) !important;
+        border-radius: var(--border-radius) !important;
+        box-shadow: var(--shadow-sm) !important;
+      }
+    }
+  }
+}
+.vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn>div{
+  border-color: var(--color-primary) !important;
+}
+.vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn.isDown>div:first-child, .vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn:hover>div:first-child{
+  border-color: transparent!important;
+  border-right-color: var(--color-primary) !important;
+}
+.vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn.isDown>div:nth-child(2), .vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn:hover>div:nth-child(2){
+  border-right-color: var(--color-primary) !important;
+}
+.vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn.isDown>div:nth-child(3), .vue-auth-box_ .auth-control_ .range-box .range-slider .range-btn:hover>div:nth-child(3){
+  border-color: transparent!important;
+  border-left-color: var(--color-primary) !important;
+}
+// -----------------------------------elementUI 个性化样式
+.el-popover{
+  .popover-header{
+    margin-bottom: var(--py);
+    .header-title{
+      font-size: var(--size-md);
+      color: var(--color-text-primary);
+    }
+    .header-info{
+      margin-top: var(--py-sm);
+      font-size: var(--size-sm);
+      color: var(--color-text-secondary);
+    }
+  }
+  .popover-title{
+    margin-bottom: var(--py-sm);
+  }
+  .popover-content{
+    &+.popover-title{
+      margin-top: var(--py-md);
+    }
+  }
+}
+.el-button{
+  font-weight: normal!important;
+  i{
+    font-size: var(--size-md);
+    margin-right: var(--px-xs);
+  }
+  span ~ i {
+    margin-left: var(--px-xs);
+    margin-right: 0;
+  }
+}
+micro-app, micro-app-body{
+  height: 100%;
+}
+.page-padding{
+  padding: var(--py) var(--px) var(--py-lg);
+}
+.form-tip{
+  margin-left: var(--px-xs);
+  line-height: 1.15;
+  font-size: var(--size-sm);
+  color: var(--color-text-secondary);
+}
+.form-required-tip{
+  color: var(--el-color-danger);
+  margin-right: var(--px-xs);
+}
+.detail-list{
+  .detail-item{
+    &+.detail-item{
+      margin-top: var(--py-md);
+    }
+    .item-label{
+      margin-bottom: var(--py-xs);
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+    .item-content{
+    }
+  }
+}
+// -----------------------------------通用布局样式
+.flex{
+  display: flex;
+  &.flex-row{
+    flex-direction: row;
+  }
+  &.flex-col{
+    flex-direction: column;
+  }
+  &.flex-row-reverse{
+    flex-direction: row-reverse;
+  }
+  &.flex-col-reverse{
+    flex-direction: column-reverse;
+  }
+  &.flex-wrap{
+    flex-wrap: wrap;
+  }
+  &.flex-wrap-reverse{
+    flex-wrap: wrap-reverse;
+  }
+  &.flex-nowrap{
+    flex-wrap: nowrap;
+  }
+  &.justify-start{
+    justify-content: flex-start;
+  }
+  &.justify-end{
+    justify-content: flex-end;
+  }
+  &.justify-center{
+    justify-content: center;
+  }
+  &.justify-between{
+    justify-content: space-between;
+  }
+  &.justify-around{
+    justify-content: space-around;
+  }
+  &.justify-evenly{
+    justify-content: space-evenly;
+  }
+  &.items-start{
+    align-items: flex-start;
+  }
+  &.items-end{
+    align-items: flex-end;
+  }
+  &.items-center{
+    align-items: center;
+  }
+  &.items-baseline{
+    align-items: baseline;
+  }
+  &.items-stretch{
+    align-items: stretch;
+  }
+}
+
+.ellipse {
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
