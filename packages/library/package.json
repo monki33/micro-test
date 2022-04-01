@@ -1,0 +1,9 @@
+{
+  "name": "@mictest/library",
+  "version": "1.0.0",
+  "description": "common library",
+  "author": "Zhang Ye",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.14.2"
+  }
+}
